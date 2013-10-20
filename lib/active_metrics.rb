@@ -1,11 +1,3 @@
-require "active_metrics/engine"
-
-require "active_metrics/kpis"
-require "active_metrics/segments"
-require "active_metrics/cohort_table"
-
-require "active_metrics/load_reports"
-
 module ActiveMetrics
   @reports = []
 
@@ -28,13 +20,17 @@ module ActiveMetrics
   end
 
   def self.reports
-    puts "lkflsdkf"
     @reports
   end
 
   def self.reset
     @reports = []
   end
+
+  def self.root
+    @root ||= File.expand_path("../../", __FILE__)
+  end
 end
 
-require 'active_metrics/load_reports'
+require 'active_metrics/engine'
+
