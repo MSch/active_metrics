@@ -1,2 +1,38 @@
-<h1>Dashboard#welcome</h1>
-<p>Find me in app/views/active_metrics/dashboard/welcome.html.erb</p>
+<% @table = ActiveMetrics.reports[0].generate_to_h %>
+<div class="navbar navbar-inner block-header">
+  <div class="muted pull-left">User Retention</div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Week
+      </th>
+      <th>
+        Reg. Users
+      </th>
+      <% (0..4).each do |i| %>
+        <th>
+          Week <%= i %>
+        </th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @table.each do |cohort| %>
+      <tr>
+        <td>
+          <%= cohort[:segment].strftime("%Y-%m-%d") %>
+        </td>
+        <td>
+          <%= cohort[:users_registered].size %>
+        </td>
+        <% cohort[:users_active_after_n_week].each do |users_active| %>
+          <td>
+              <%= users_active.size %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

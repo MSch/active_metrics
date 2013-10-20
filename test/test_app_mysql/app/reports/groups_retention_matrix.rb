@@ -1,4 +1,3 @@
-puts "report file -------"
 ActiveMetrics.report do
   define_segment :weeks do
     (0..7).map do |n|
