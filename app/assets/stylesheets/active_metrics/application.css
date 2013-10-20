@@ -10,4 +10,9 @@
  *
  *= require_self
  *= require_tree .
+ *= require assets/DT_bootstrap.css
+ *= require bootstrap/css/bootstrap.min.css
+ *= require bootstrap/css/bootstrap-responsive.min.css
+ *= require assets/styles.css
+ *= require vendors/easypiechart/jquery.easy-pie-chart.css
  */

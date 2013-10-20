@@ -11,3 +11,8 @@
 // about supported directives.
 //
 //= require_tree .
+//= require vendors/jquery-1.9.1.min.js
+//= require bootstrap/js/bootstrap.min.js
+//= require vendors/easypiechart/jquery.easy-pie-chart.js
+//= require vendors/modernizr-2.6.2-respond-1.1.0.min.js
+//= require assets/scripts.js

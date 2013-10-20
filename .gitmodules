@@ -1,0 +1,3 @@
+[submodule "vendor/assets/theme"]
+	path = vendor/assets/theme
+	url = git@github.com:VinceG/Bootstrap-Admin-Theme.git
